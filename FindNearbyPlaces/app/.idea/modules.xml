@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Find Nearby Places.iml" filepath="$PROJECT_DIR$/../Find Nearby Places.iml" group="Find Nearby Places" />
+      <module fileurl="file://$PROJECT_DIR$/app.iml" filepath="$PROJECT_DIR$/app.iml" group="Find Nearby Places/app" />
+    </modules>
+  </component>
+</project>
