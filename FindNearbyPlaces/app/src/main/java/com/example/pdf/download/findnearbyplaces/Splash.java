@@ -43,7 +43,7 @@ public class Splash extends AppCompatActivity {
                     exc.printStackTrace();
                 }
                 finally {
-                    Intent i = new Intent(getBaseContext(), MapsActivity.class);
+                    Intent i = new Intent(getBaseContext(), MainActivity.class);
                     startActivity(i);
 
                 }
