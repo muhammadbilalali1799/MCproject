@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(mFirebaseAuth!=null){
                     Toast.makeText(LoginActivity.this,"You are logged in",Toast.LENGTH_SHORT).show();
                     Intent i=new Intent(LoginActivity.this,MapsActivity.class);
-                    //startActivity(i);
+                    startActivity(i);
                 }
                 else
                 {
@@ -72,12 +72,12 @@ public class LoginActivity extends AppCompatActivity {
                     password.setError("Please Enter Your Password.");
                     password.requestFocus();
                 }
-                else if(email.isEmpty() && pwd.isEmpty())
+                else if(email.isEmpty()==true && pwd.isEmpty()==true)
                 {
                     Toast.makeText(LoginActivity.this,"Fields Are Empty!",Toast.LENGTH_SHORT).show();
 
                 }
-                else if(!(email.isEmpty() && pwd.isEmpty()))
+                else if(email.isEmpty()==false && pwd.isEmpty()==false)
                 {
                     mFirebaseAuth.signInWithEmailAndPassword(email,pwd).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override

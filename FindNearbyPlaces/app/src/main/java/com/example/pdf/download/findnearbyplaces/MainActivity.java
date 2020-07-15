@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 String pwd=password.getText().toString();
                 if(email.isEmpty()==true && pwd.isEmpty()==true)
                 {
-                    Toast.makeText(MainActivity.this,"Fields Are Empty!",Toast.LENGTH_SHORT);
+                    Toast.makeText(MainActivity.this,"Fields Are Empty!",Toast.LENGTH_SHORT).show();
 
                 }
                 else if(pwd.isEmpty())
@@ -52,13 +52,13 @@ public class MainActivity extends AppCompatActivity {
                     emailId.setError("Please enter email id.");
                     emailId.requestFocus();
                 }
-                else if((!email.isEmpty() && !pwd.isEmpty()))
+                else if(email.isEmpty()==false && pwd.isEmpty()==false)
                 {
                     mFirebaseAuth.createUserWithEmailAndPassword(email,pwd).addOnCompleteListener(MainActivity.this, new OnCompleteListener<com.google.firebase.auth.AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<com.google.firebase.auth.AuthResult> task) {
                             if(!task.isSuccessful()){
-                                Toast.makeText(MainActivity.this,"SignUp Unsuccessful, Please Try Again",Toast.LENGTH_SHORT);
+                                Toast.makeText(MainActivity.this,"SignUp Unsuccessful, Please Try Again",Toast.LENGTH_SHORT).show();
 
                             }
                             else{
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this,"Error Occurred!",Toast.LENGTH_SHORT);
+                    Toast.makeText(MainActivity.this,"Error Occurred!",Toast.LENGTH_SHORT).show();
                 }
             }
         });
